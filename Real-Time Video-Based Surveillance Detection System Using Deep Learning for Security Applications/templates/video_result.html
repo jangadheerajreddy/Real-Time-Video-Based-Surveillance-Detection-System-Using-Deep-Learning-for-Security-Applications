@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+
+    <style>
+        body {
+            background: url('/static/result.gif') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .glass {
+            margin-top: 50px;
+            background: rgba(0,0,0,0.45);
+            padding: 40px;
+            border-radius: 20px;
+            display: inline-block;
+            backdrop-filter: blur(14px);
+        }
+
+        button {
+            padding: 18px;
+            font-size: 20px;
+            border-radius: 12px;
+            border: none;
+            margin-top: 20px;
+            background: linear-gradient(45deg,#00e676,#4dff4d);
+            font-weight: bold;
+            cursor: pointer;
+            width: 250px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass">
+        <h2>🎬 Detection Running...</h2>
+
+        <img src="/video_feed_uploaded/{{ video_file }}" width="900" style="border-radius: 15px;">
+
+        <br><br>
+
+        <a href="/">
+            <button>🏠 Return Home</button>
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detect</title>
+
+    <style>
+        body {
+            background: url('/static/detect.gif') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .glass {
+            margin-top: 80px;
+            display: inline-block;
+            padding: 40px;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.2);
+        }
+
+        .btn {
+            padding: 18px;
+            font-size: 22px;
+            margin: 20px;
+            border: none;
+            border-radius: 14px;
+            width: 350px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .live { background: linear-gradient(45deg,#ff0844,#ffb199); }
+        .upload { background: linear-gradient(45deg,#f7971e,#ffd200); }
+        .home { background: linear-gradient(45deg,#00c6ff,#0072ff); }
+
+        .btn:hover {
+            transform: scale(1.09);
+            box-shadow: 0 0 20px white;
+        }
+
+        input[type=file] {
+            font-size: 18px;
+            margin: 20px;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass">
+        <h2>🎥 Real-Time Video-Based Surveillance Detection System Using Deep Learning for Security Applications</h2>
+
+        <a href="/video_feed_live">
+            <button class="btn live">📡 Live Camera Detection</button>
+        </a>
+
+        <form action="/upload_video" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required><br>
+            <button class="btn upload">📁 Upload Video</button>
+        </form>
+
+        <a href="/">
+            <button class="btn home">🏠 Return Home</button>
+        </a>
+    </div>
+
+</body>
+</html>

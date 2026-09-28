@@ -2,15 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Repository cloned successfully'
-            }
-        }
 
         stage('Build') {
             steps {
                 echo 'Build Successful'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat '''
+                cd "Real-Time Video-Based Surveillance Detection System Using Deep Learning for Security Applications"
+                docker build -t video-surveillance:v4 .
+                '''
             }
         }
     }

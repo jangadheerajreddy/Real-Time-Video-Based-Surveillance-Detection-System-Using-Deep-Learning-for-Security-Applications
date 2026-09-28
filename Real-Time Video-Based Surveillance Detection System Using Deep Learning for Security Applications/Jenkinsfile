@@ -9,13 +9,12 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
-            steps {
-                bat '''
-                cd "Real-Time Video-Based Surveillance Detection System Using Deep Learning for Security Applications"
-                docker build -t video-surveillance:v4 .
-                '''
-            }
-        }
+       stage('Docker Build') {
+    steps {
+        bat '''
+        docker build -f "Dockerfile" -t video-surveillance:v4 "Real-Time Video-Based Surveillance Detection System Using Deep Learning for Security Applications"
+        '''
+    }
+}
     }
 }
